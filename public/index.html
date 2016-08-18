@@ -7,7 +7,9 @@
         <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
         <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/cardsController.js"></script>
         <script src="scripts/cardDirective.js"></script>
@@ -19,13 +21,15 @@
            <scores></scores>
         </header>
 
-        <section id="cards" class="container-fluid" ng-controller="CardsController as cardsController">
+      <div ng-view>  
+      </div>
+     <!--    <section id="cards" class="container-fluid" ng-controller="CardsIndexCtrl as CardsIndexCtrl">
           <div class="row">
-            <div ng-repeat="card in cardsController.questionsList">
+            <div ng-repeat="card in CardsIndexCtrl.all">
               <wdi-card></wdi-card>
            </div> 
           </div>
-        </section>
+        </section> -->
 
       <footer>
         <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
